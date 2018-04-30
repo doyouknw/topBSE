@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Top BSE</title>
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/style.css" >
+        
+        <script
+          src="http://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="/"><strong>Top BSE</strong></a>
+                </div>
+                <div class="searchBar pull-right">
+                    <input type="search" class="form-control" placeholder="Search BSE" id="search" />
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="table-area">
+                <table class="dataTable table">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th data-field="Code">Code</th>
+                            <th data-field="Name">Name</th>
+                            <th data-field="Open">Open</th>
+                            <th data-field="High">High</th>
+                            <th data-field="Low">Low</th>
+                            <th data-field="Close">Close</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for tdata in data %}
+                        <tr>
+                            <td>{{tdata.code}}</td>
+                            <td>{{tdata.name}}</td>
+                            <td>{{tdata.open}}</td>
+                            <td>{{tdata.high}}</td>
+                            <td>{{tdata.low}}</td>
+                            <td>{{tdata.close}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div class="pull-right" id="msg"></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="assets/script.js"></script>
+    </body>
+</html>

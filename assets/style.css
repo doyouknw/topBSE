@@ -1,0 +1,23 @@
+.searchBar{
+    width: 50%
+}
+#search{
+    margin-top: 8px;
+}
+.table-area{
+    background: rgba(19, 21, 27, 0.5);
+    border: 2px solid rgb(19, 21, 27);
+    border-radius: 5px;
+    padding: 25px;
+    color: #fff;
+}
+.table-area table {
+    color: #fff;
+}
+body {
+    background: url(images/bg.png) no-repeat center fixed;
+    background-size: cover;
+}
+.navbar-inverse {
+  background: rgba(0, 0, 0, 0.5);  
+}
