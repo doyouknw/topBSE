@@ -1,9 +1,9 @@
-##Daily Top BSE
+## Daily Top BSE
 
 [Source](https://www.bseindia.com/markets/equity/EQReports/BhavCopyDebt.aspx?expandable=3)
 
 
-#Python & CherryPY app
+# Python & CherryPY app
 - Downloads the Equity bhavcopy zip from the above page
 - Extracts and parses the CSV file in it
 - Writes the records into Redis into appropriate data structures (Fields: code, name, open, high, low, close)
