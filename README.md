@@ -1,6 +1,6 @@
 # Daily Top BSE
 
-[Source](https://www.bseindia.com/markets/equity/EQReports/BhavCopyDebt.aspx?expandable=3)
+BSE zip [Source](https://www.bseindia.com/markets/equity/EQReports/BhavCopyDebt.aspx?expandable=3)
 
 
 ## Python & CherryPY app
