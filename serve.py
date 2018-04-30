@@ -75,6 +75,10 @@ class StockData(object):
 
 
 config = {
+    'global': {
+        'server.socket_host': '0.0.0.0',
+        'server.socket_port': int(os.environ.get('PORT', 8000)),
+    },
     '/': {
         "tools.staticdir.root": os.path.abspath(os.path.dirname(__file__))
     },

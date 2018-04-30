@@ -19,9 +19,15 @@ $(document).on('keyup', '#search', function(e){
        method: 'GET',
        data: {'name' : search },
        success: function(a){
-           tableData = a;
-           size = tableData.length;
-           loadTable();
+           if(a.length != 0){
+               tableData = a;
+               size = tableData.length;
+               loadTable();
+           }
+           return false;
+       },
+       error: function(err){
+           console.error(err);
        }
     });
 });

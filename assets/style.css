@@ -1,8 +1,18 @@
-.searchBar{
-    width: 50%
+*{
+    font-family: 'Oswald', sans-serif;
 }
-#search{
-    margin-top: 8px;
+.signature{
+    position: fixed;
+    bottom: 0;
+    right: 10;
+    color: oldlace;
+    font-weight: bold;
+    text-decoration: underline;
+}
+@media only screen and (max-width: 400px){
+    .signature{
+        display: none;
+    }
 }
 .table-area{
     background: rgba(19, 21, 27, 0.5);
