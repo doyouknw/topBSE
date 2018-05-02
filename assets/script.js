@@ -9,10 +9,10 @@ var dataFields = tableHeaders.map(header => {
     });
 var search;
 var start = null, end = null, size = null;
-$(document).on('keyup', '#search', function(e){
+$(document).on('change', '#search', function(e){
     search = $(this).val();
     if(!search){
-        return false;
+        location.reload();
     }
     $.ajax({
        url: '/searchResponse',
@@ -37,7 +37,7 @@ function rowHtml(data){
         var regex = new RegExp(search, "i");
         if(field == "name"){
             return html + "<td>" + data[field].replace(regex,
-                        `<span style="background: #ffc600;">${search.toUpperCase()}</span>`) + "</td>"
+                        `<span style="background: #ffc600; color: #000;">${search.toUpperCase()}</span>`) + "</td>"
         }
         else
             return html + "<td>" + data[field] + "</td>";
